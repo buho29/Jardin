@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jardin", "jardin.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test Task", "..\example lib\test Task\test Task.vcxproj", "{7045A57C-7574-4A51-9ACD-FD5E0D1931F3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test button", "..\example lib\test button\test button.vcxproj", "{4AFCF41E-2F51-400C-AAC4-3FEB0994FAD7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test component", "..\example lib\test component\test component.vcxproj", "{F5C4CD16-A227-4D8F-9524-B023627CADE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+		{7045A57C-7574-4A51-9ACD-FD5E0D1931F3}.Debug|x86.ActiveCfg = Debug|Win32
+		{7045A57C-7574-4A51-9ACD-FD5E0D1931F3}.Debug|x86.Build.0 = Debug|Win32
+		{7045A57C-7574-4A51-9ACD-FD5E0D1931F3}.Release|x86.ActiveCfg = Release|Win32
+		{7045A57C-7574-4A51-9ACD-FD5E0D1931F3}.Release|x86.Build.0 = Release|Win32
+		{4AFCF41E-2F51-400C-AAC4-3FEB0994FAD7}.Debug|x86.ActiveCfg = Debug|Win32
+		{4AFCF41E-2F51-400C-AAC4-3FEB0994FAD7}.Debug|x86.Build.0 = Debug|Win32
+		{4AFCF41E-2F51-400C-AAC4-3FEB0994FAD7}.Release|x86.ActiveCfg = Release|Win32
+		{4AFCF41E-2F51-400C-AAC4-3FEB0994FAD7}.Release|x86.Build.0 = Release|Win32
+		{F5C4CD16-A227-4D8F-9524-B023627CADE0}.Debug|x86.ActiveCfg = Debug|Win32
+		{F5C4CD16-A227-4D8F-9524-B023627CADE0}.Debug|x86.Build.0 = Debug|Win32
+		{F5C4CD16-A227-4D8F-9524-B023627CADE0}.Release|x86.ActiveCfg = Release|Win32
+		{F5C4CD16-A227-4D8F-9524-B023627CADE0}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7C1D4F0-4CE9-4F4F-838A-3EA782BF8003}
+	EndGlobalSection
+EndGlobal

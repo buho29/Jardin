@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SensorLogFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv"
+            style="@style/AppTheme.Title"
+            android:text="@string/RSSI"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/btRefresh"
+            style="@style/AppTheme.IconButton"
+            android:background="@drawable/refresh_background"
+            app:layout_constraintBottom_toTopOf="@+id/listAlarms"
+            app:layout_constraintEnd_toEndOf="@+id/tv"
+            app:layout_constraintTop_toTopOf="@+id/tv" />
+
+        <ImageView
+            android:id="@+id/ivRSSI"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:contentDescription="@string/RSSI"
+            android:src="@drawable/wifi_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvRSSI"
+            style="@style/AppTheme.TextValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivRSSI"
+            tools:text="-50db" />
+
+        <TextView
+            android:id="@+id/tvDistanceRSSI"
+            style="@style/AppTheme.TextValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivRSSI"
+            tools:text="11m" />
+
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/AppTheme.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/server"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRSSI" />
+
+
+        <EditText
+            android:id="@+id/etIP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:digits="0123456789."
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:text="IP"
+            app:layout_constraintEnd_toStartOf="@+id/btSaveIp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+        <ImageButton
+            android:id="@+id/btSaveIp"
+            style="@style/AppTheme.IconButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/save_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+        <TextView
+            android:id="@+id/tv5"
+            style="@style/AppTheme.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/weather"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etIP" />
+
+        <TextView
+            android:id="@+id/tv6"
+            style="@style/AppTheme.TextValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City ID"
+            app:layout_constraintBottom_toBottomOf="@+id/etCityID"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+
+        <EditText
+            android:id="@+id/etCityID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:digits="0123456789."
+            android:ems="10"
+            android:inputType="number"
+            android:text="123456"
+            app:layout_constraintEnd_toStartOf="@+id/btSaveWeather"
+            app:layout_constraintStart_toStartOf="@+id/etCityName"
+            app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+        <ImageButton
+            android:id="@+id/btSaveWeather"
+            style="@style/AppTheme.IconButton"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/save_up_background"
+            app:layout_constraintBottom_toBottomOf="@+id/etCityName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+        <TextView
+            android:id="@+id/tv7"
+            style="@style/AppTheme.TextValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City Name"
+            app:layout_constraintBottom_toBottomOf="@+id/etCityName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etCityName" />
+
+
+        <EditText
+            android:id="@+id/etCityName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Castrelo"
+            app:layout_constraintEnd_toStartOf="@+id/btSaveWeather"
+            app:layout_constraintStart_toEndOf="@+id/tv7"
+            app:layout_constraintTop_toBottomOf="@+id/etCityID" />
+
+        <TextView
+            android:id="@+id/tv8"
+            style="@style/AppTheme.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/WiFi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCityName" />
+
+        <TextView
+            android:id="@+id/tv9"
+            style="@style/AppTheme.TextValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="SSID"
+            app:layout_constraintBottom_toBottomOf="@+id/etSSID"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv8" />
+
+
+        <EditText
+            android:id="@+id/etSSID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="vomistar"
+            app:layout_constraintEnd_toStartOf="@+id/btSaveWeather"
+            app:layout_constraintStart_toEndOf="@+id/tv10"
+            app:layout_constraintTop_toBottomOf="@+id/tv8" />
+
+
+        <ImageButton
+            android:id="@+id/btSaveWifi"
+            style="@style/AppTheme.IconButton"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/save_up_background"
+            app:layout_constraintBottom_toBottomOf="@+id/etPass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv8" />
+
+
+        <TextView
+            android:id="@+id/tv10"
+            style="@style/AppTheme.TextValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pass"
+            app:layout_constraintBottom_toBottomOf="@+id/etPass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etPass" />
+
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="teta"
+            app:layout_constraintEnd_toStartOf="@+id/btSaveWifi"
+            app:layout_constraintStart_toEndOf="@+id/tv10"
+            app:layout_constraintTop_toBottomOf="@+id/etSSID" />
+
+
+        <TextView
+            android:id="@+id/tv11"
+            style="@style/AppTheme.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/esp32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPass" />
+
+
+        <Button
+            android:id="@+id/btResetData"
+            style="@style/AppTheme.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/resetdata"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv11" />
+
+        <Button
+            android:id="@+id/btResetDataSensor"
+            style="@style/AppTheme.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/resetdataSensor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btResetData" />
+        <Button
+            android:id="@+id/btReBoot"
+            style="@style/AppTheme.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/reboot"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btResetDataSensor" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
